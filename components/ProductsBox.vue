@@ -1,0 +1,100 @@
+<template>
+    <v-container my-5>
+        <div class="text-h3 my-5">
+            {{ title }}
+        </div>
+        <v-slide-group show-arrows="true">
+            <v-slide-item v-for="product in products" :key="product.id">
+                <v-card
+                    :color="active ? undefined : 'grey lighten-1'"
+                    class="ma-2"
+                    height="185"
+                    width="185"
+                    @click="toggle"
+                >
+                    <v-row
+                        class="fill-height"
+                        align="center"
+                        justify="center"
+                    >
+                        <v-scale-transition>
+                        <v-icon
+                            v-if="active"
+                            color="white"
+                            size="50"
+                            v-text="'mdi-close-circle-outline'"
+                        ></v-icon>
+                        </v-scale-transition>
+                    </v-row>
+                </v-card>
+            </v-slide-item>
+        </v-slide-group>
+    </v-container>
+</template>
+<script>
+export default {
+    data(){
+        return{
+            title: '熱銷商品',
+            products:[
+                {
+                    id:'01',
+                    img:'',
+                },
+                {
+                    id:'02',
+                    img:'',
+                },
+                {
+                    id:'03',
+                    img:'',
+                },
+                {
+                    id:'04',
+                    img:'',
+                },
+                {
+                    id:'05',
+                    img:'',
+                },
+                {
+                    id:'06',
+                    img:'',
+                },
+                {
+                    id:'07',
+                    img:'',
+                },
+                {
+                    id:'08',
+                    img:'',
+                },
+                {
+                    id:'09',
+                    img:'',
+                },
+                {
+                    id:'05',
+                    img:'',
+                },
+                {
+                    id:'06',
+                    img:'',
+                },
+                {
+                    id:'07',
+                    img:'',
+                },
+                {
+                    id:'08',
+                    img:'',
+                },
+                {
+                    id:'09',
+                    img:'',
+                },
+            ],
+        }
+    }
+}
+</script>
